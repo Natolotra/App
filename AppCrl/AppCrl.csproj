@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7AE91809-5EA5-459F-8209-6110919295BC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AppCrl</RootNamespace>
+    <AssemblyName>AppCrl</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="crl\crlAbonnement.cs" />
+    <Compile Include="crl\crlAgence.cs" />
+    <Compile Include="crl\crlAgent.cs" />
+    <Compile Include="crl\crlArrondissement.cs" />
+    <Compile Include="crl\crlAutorisationDepart.cs" />
+    <Compile Include="crl\crlAutorisationVoyage.cs" />
+    <Compile Include="crl\crlBagage.cs" />
+    <Compile Include="crl\crlBillet.cs" />
+    <Compile Include="crl\crlBilletCommande.cs" />
+    <Compile Include="crl\crlBonDeCommande.cs" />
+    <Compile Include="crl\crlCalculCategorieBillet.cs" />
+    <Compile Include="crl\crlCalculPrixBillet.cs" />
+    <Compile Include="crl\crlCalculReductionBillet.cs" />
+    <Compile Include="crl\crlChauffeur.cs" />
+    <Compile Include="crl\crlCheque.cs" />
+    <Compile Include="crl\crlClient.cs" />
+    <Compile Include="crl\crlCommission.cs" />
+    <Compile Include="crl\crlCommissionDevis.cs" />
+    <Compile Include="crl\crlCommune.cs" />
+    <Compile Include="crl\crlCooperative.cs" />
+    <Compile Include="crl\crlDesignationCommission.cs" />
+    <Compile Include="crl\crlDistrict.cs" />
+    <Compile Include="crl\crlDureeAbonnement.cs" />
+    <Compile Include="crl\crlDureeAbonnementDevis.cs" />
+    <Compile Include="crl\crlEscorte.cs" />
+    <Compile Include="crl\crlEscorteVoyage.cs" />
+    <Compile Include="crl\crlEtablissementScolaire.cs" />
+    <Compile Include="crl\crlFacture.cs" />
+    <Compile Include="crl\crlFicheBord.cs" />
+    <Compile Include="crl\crlGareRoutiere.cs" />
+    <Compile Include="crl\crlIndividue.cs" />
+    <Compile Include="crl\crlInfoExedantBagage.cs" />
+    <Compile Include="crl\crlInfoPrixCommission.cs" />
+    <Compile Include="crl\crlItineraire.cs" />
+    <Compile Include="crl\crlLicence.cs" />
+    <Compile Include="crl\crlLien.cs" />
+    <Compile Include="crl\crlObservationAgent.cs" />
+    <Compile Include="crl\crlObservationChauffeur.cs" />
+    <Compile Include="crl\crlObservationMateriel.cs" />
+    <Compile Include="crl\crlObservationVehicule.cs" />
+    <Compile Include="crl\crlOrganisme.cs" />
+    <Compile Include="crl\crlParamVehicule.cs" />
+    <Compile Include="crl\crlPassager.cs" />
+    <Compile Include="crl\crlPlaceFB.cs" />
+    <Compile Include="crl\crlPrelevement.cs" />
+    <Compile Include="crl\crlProforma.cs" />
+    <Compile Include="crl\crlProprietaire.cs" />
+    <Compile Include="crl\crlProvince.cs" />
+    <Compile Include="crl\crlQuartier.cs" />
+    <Compile Include="crl\crlReceptionnaire.cs" />
+    <Compile Include="crl\crlRecu.cs" />
+    <Compile Include="crl\crlRecuAbonnement.cs" />
+    <Compile Include="crl\crlRecuAD.cs" />
+    <Compile Include="crl\crlRecuDecaisser.cs" />
+    <Compile Include="crl\crlRecuEncaisser.cs" />
+    <Compile Include="crl\crlRecuFac.cs" />
+    <Compile Include="crl\crlRegion.cs" />
+    <Compile Include="crl\crlRouteNationale.cs" />
+    <Compile Include="crl\crlSessionAgence.cs" />
+    <Compile Include="crl\crlSessionCaisse.cs" />
+    <Compile Include="crl\crlSituationFamiliale.cs" />
+    <Compile Include="crl\crlSociete.cs" />
+    <Compile Include="crl\crlSocieteTransport.cs" />
+    <Compile Include="crl\crlSourceEnergie.cs" />
+    <Compile Include="crl\crlSuiviCommission.cs" />
+    <Compile Include="crl\crlTarifBaseBillet.cs" />
+    <Compile Include="crl\crlTarifBaseCommission.cs" />
+    <Compile Include="crl\crlTarifCommissionPar.cs" />
+    <Compile Include="crl\crlTarifDeveloppement.cs" />
+    <Compile Include="crl\crlTrajet.cs" />
+    <Compile Include="crl\crlTypeAgence.cs" />
+    <Compile Include="crl\crlTypeAgent.cs" />
+    <Compile Include="crl\crlTypeCommssion.cs" />
+    <Compile Include="crl\crlTypePrelevement.cs" />
+    <Compile Include="crl\crlTypeProprietaire.cs" />
+    <Compile Include="crl\crlTypeRecuAD.cs" />
+    <Compile Include="crl\crlUSAbonnementNV.cs" />
+    <Compile Include="crl\crlUSAbonnementNVDevis.cs" />
+    <Compile Include="crl\crlUSAppareil.cs" />
+    <Compile Include="crl\crlUSArret.cs" />
+    <Compile Include="crl\crlUSAxe.cs" />
+    <Compile Include="crl\crlUSBillet.cs" />
+    <Compile Include="crl\crlUSCarte.cs" />
+    <Compile Include="crl\crlUSCarteReduction.cs" />
+    <Compile Include="crl\crlUSCategorieBillet.cs" />
+    <Compile Include="crl\crlUSInfoPasse.cs" />
+    <Compile Include="crl\crlUSLieu.cs" />
+    <Compile Include="crl\crlUSLigne.cs" />
+    <Compile Include="crl\crlUSPlageNombreBillet.cs" />
+    <Compile Include="crl\crlUSPoint.cs" />
+    <Compile Include="crl\crlUSPrixBase.cs" />
+    <Compile Include="crl\crlUSReductionBillet.cs" />
+    <Compile Include="crl\crlUSReductionParticulier.cs" />
+    <Compile Include="crl\crlUSTrajet.cs" />
+    <Compile Include="crl\crlUSTypeAppareil.cs" />
+    <Compile Include="crl\crlUSValidationReduction.cs" />
+    <Compile Include="crl\crlUSVoyage.cs" />
+    <Compile Include="crl\crlUSZone.cs" />
+    <Compile Include="crl\crlVehicule.cs" />
+    <Compile Include="crl\crlVerification.cs" />
+    <Compile Include="crl\crlVille.cs" />
+    <Compile Include="crl\crlVoiture.cs" />
+    <Compile Include="crl\crlVoyage.cs" />
+    <Compile Include="crl\crlVoyageAbonnement.cs" />
+    <Compile Include="crl\crlVoyageAbonnementDevis.cs" />
+    <Compile Include="crl\crlZone.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

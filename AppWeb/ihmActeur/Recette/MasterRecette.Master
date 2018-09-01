@@ -1,0 +1,82 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterRecette.master.cs" Inherits="AppWeb.ihmActeur.Recette.MasterRecette" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="../../CssStyle/Style.css" rel="stylesheet" type="text/css" />
+    <link rel="icon" href="../../CssStyle/images/ico.png" />
+    
+    <!-- andrana menu -->
+    <link href="../../CssStyle/CssMenu/style.css" rel="stylesheet" type="text/css" />
+    <!-- fin andrana menu -->
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            
+            <div id="logo">
+                <div id="logoL">
+                    <h1>LG Trans</h1>
+                </div>
+                <div id="logoR">
+                    <b>Gestion et Management <br/>Transport Public Routier de Voyageurs</b>
+                </div>
+		    </div>
+			<div id="session">
+			    <div id="horloge">
+                    <asp:Label ID="LabLieuAgence" runat="server" Text=""></asp:Label>
+                    <div id="horloge2">
+                        <script type="text/javascript" src="../../scripts/cntScript.js"></script>
+                    </div>
+                </div>
+                <div id="horlogeRight">
+                    <asp:Label ID="LabSession" runat="server" Text=""></asp:Label><br />
+                    <a href="../Deconnecte.aspx">Déconnexion</a>
+                </div>
+			</div>
+        </div>
+
+        &nbsp;
+        <ul id="css3menu1" class="topmenu">
+	        <li class="topmenu"><a href="Default.aspx" style="height:22px;line-height:22px;"><img src="../../CssStyle/images/home24.png" alt="A"/>Accueil</a></li>
+            
+             <li class="topmenu"><a href="#" style="height:22px;line-height:22px;"><img src="../../CssStyle/images/ca.png" alt="C"/>Chiffre d'affaire</a>
+                <ul>
+                    <li class="subfirst"><a href="ChiffreAffaire.aspx"><img src="../../CssStyle/images/ca.png" alt="C"/>Chiffre d'affaire générale</a></li>
+                    <li><a href="ChiffreAffaireVoiture.aspx"><img src="../../CssStyle/images/ca.png" alt="C"/>Chiffre d'affaire par véhicule</a></li>
+                    <li><a href="ChiffreAffaireAxe.aspx"><img src="../../CssStyle/images/ca.png" alt="C"/>Chiffre d'affaire par axe</a></li>
+                    <li><a href="ChifffreAffaireDeveloppement.aspx"><img src="../../CssStyle/images/ca.png" alt="C"/>Chiffre d'affaire développement</a></li>
+                    <li><a href="ChiffreAffaireCarburant.aspx"><img src="../../CssStyle/images/ca.png" alt="C"/>Chiffre d'affaire carburant</a></li>
+                    <li><a href="ChiffreAffaireCarburantVoiture.aspx"><img src="../../CssStyle/images/ca.png" alt="C"/>Chiffre d'affaire carburant par véhicule</a></li>
+                    <li><a href="RecetteTransporteur.aspx"><img src="../../CssStyle/images/ca.png" alt="C"/>Recette transporteur</a></li>
+                </ul>
+             </li>
+        </ul>
+            
+        <div id="content">
+                
+                
+            
+            <form id="form1" runat="server">
+            <div>
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            </form>
+                
+            <div class="clear">
+		    </div>
+		        
+        </div>
+            
+        <div id="foot">
+            <em>LG Trans - Version 1.0 Copyright © 2012, CNT</em>
+        </div>
+    </div>
+</body>
+</html>
+

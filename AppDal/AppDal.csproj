@@ -1,0 +1,324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5FBDEA06-14A0-44C2-9698-F19FFD93ADF6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AppDal</RootNamespace>
+    <AssemblyName>AppDal</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit, Version=18.1.0.0, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL">
+      <HintPath>..\packages\AjaxControlToolkit.18.1.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.5.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.5.1\lib\net45\Google.Protobuf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="itextsharp, Version=4.0.8.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>dll\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.12.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.8.0.12\lib\net452\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dal\impl\ImplAutorisationVoyage.cs" />
+    <Compile Include="dal\impl\ImplDalAbonnement.cs" />
+    <Compile Include="dal\impl\ImplDalAgence.cs" />
+    <Compile Include="dal\impl\ImplDalAgent.cs" />
+    <Compile Include="dal\impl\ImplDalArrondissement.cs" />
+    <Compile Include="dal\impl\ImplDalAutorisationDepart.cs" />
+    <Compile Include="dal\impl\ImplDalBagage.cs" />
+    <Compile Include="dal\impl\ImplDalBillet.cs" />
+    <Compile Include="dal\impl\ImplDalBilletCommande.cs" />
+    <Compile Include="dal\impl\ImplDalBonDeCommande.cs" />
+    <Compile Include="dal\impl\ImplDalCA.cs" />
+    <Compile Include="dal\impl\ImplDalCalculCategorieBillet.cs" />
+    <Compile Include="dal\impl\ImplDalCalculPrixBillet.cs" />
+    <Compile Include="dal\impl\ImplDalCalculReductionBillet.cs" />
+    <Compile Include="dal\impl\ImplDalCalendar.cs" />
+    <Compile Include="dal\impl\ImplDalChauffeur.cs" />
+    <Compile Include="dal\impl\ImplDalCheque.cs" />
+    <Compile Include="dal\impl\ImplDalClient.cs" />
+    <Compile Include="dal\impl\ImplDalCommission.cs" />
+    <Compile Include="dal\impl\ImplDalCommissionDevis.cs" />
+    <Compile Include="dal\impl\ImplDalCommune.cs" />
+    <Compile Include="dal\impl\ImplDalConnectBase.cs" />
+    <Compile Include="dal\impl\ImplDalCooperative.cs" />
+    <Compile Include="dal\impl\ImplDalDesignationCommission.cs" />
+    <Compile Include="dal\impl\ImplDalDistrict.cs" />
+    <Compile Include="dal\impl\ImplDalDureeAbonnement.cs" />
+    <Compile Include="dal\impl\ImplDalDureeAbonnementDevis.cs" />
+    <Compile Include="dal\impl\ImplDalEscorte.cs" />
+    <Compile Include="dal\impl\ImplDalEscorteVoyage.cs" />
+    <Compile Include="dal\impl\ImplDalEtablissementScolaire.cs" />
+    <Compile Include="dal\impl\ImplDalEtatCivil.cs" />
+    <Compile Include="dal\impl\ImplDalFacture.cs" />
+    <Compile Include="dal\impl\ImplDalFicheBord.cs" />
+    <Compile Include="dal\impl\ImplDalGareRoutiere.cs" />
+    <Compile Include="dal\impl\ImplDalGeneral.cs" />
+    <Compile Include="dal\impl\ImplDalIndividue.cs" />
+    <Compile Include="dal\impl\ImplDalInfoExedantBagage.cs" />
+    <Compile Include="dal\impl\ImplDalInfoPrixCommission.cs" />
+    <Compile Include="dal\impl\ImplDalItineraire.cs" />
+    <Compile Include="dal\impl\ImplDalLicence.cs" />
+    <Compile Include="dal\impl\ImplDalLien.cs" />
+    <Compile Include="dal\impl\ImplDalModePaiement.cs" />
+    <Compile Include="dal\impl\ImplDalObservationAgent.cs" />
+    <Compile Include="dal\impl\ImplDalObservationChauffeur.cs" />
+    <Compile Include="dal\impl\ImplDalObservationMateriel.cs" />
+    <Compile Include="dal\impl\ImplDalObservationVehicule.cs" />
+    <Compile Include="dal\impl\ImplDalOrganisme.cs" />
+    <Compile Include="dal\impl\ImplDalParamVehicule.cs" />
+    <Compile Include="dal\impl\ImplDalPassager.cs" />
+    <Compile Include="dal\impl\ImplDalPlaceFB.cs" />
+    <Compile Include="dal\impl\ImplDalPrelevement.cs" />
+    <Compile Include="dal\impl\ImplDalProforma.cs" />
+    <Compile Include="dal\impl\ImplDalProprietaire.cs" />
+    <Compile Include="dal\impl\ImplDalProvince.cs" />
+    <Compile Include="dal\impl\ImplDalQuartier.cs" />
+    <Compile Include="dal\impl\ImplDalReceptionnaire.cs" />
+    <Compile Include="dal\impl\ImplDalRecu.cs" />
+    <Compile Include="dal\impl\ImplDalRecuAbonnement.cs" />
+    <Compile Include="dal\impl\ImplDalRecuAD.cs" />
+    <Compile Include="dal\impl\ImplDalRecuDecaisser.cs" />
+    <Compile Include="dal\impl\ImplDalRecuEncaisser.cs" />
+    <Compile Include="dal\impl\ImplDalRecuFac.cs" />
+    <Compile Include="dal\impl\ImplDalRegion.cs" />
+    <Compile Include="dal\impl\ImplDalRouteNationale.cs" />
+    <Compile Include="dal\impl\ImplDalSecteur.cs" />
+    <Compile Include="dal\impl\implDalServiceConnectExcel.cs" />
+    <Compile Include="dal\impl\implDalServiceExcel.cs" />
+    <Compile Include="dal\impl\ImplDalServicePage.cs" />
+    <Compile Include="dal\impl\ImplDalServicePdf.cs" />
+    <Compile Include="dal\impl\ImplDalServiceRessource.cs" />
+    <Compile Include="dal\impl\ImplDalSessionAgence.cs" />
+    <Compile Include="dal\impl\ImplDalSessionCaisse.cs" />
+    <Compile Include="dal\impl\ImplDalSituationFamiliale.cs" />
+    <Compile Include="dal\impl\ImplDalSociete.cs" />
+    <Compile Include="dal\impl\ImplDalSocieteTransport.cs" />
+    <Compile Include="dal\impl\ImplDalSourceEnergie.cs" />
+    <Compile Include="dal\impl\ImplDalStatistique.cs" />
+    <Compile Include="dal\impl\ImplDalSuiviCommission.cs" />
+    <Compile Include="dal\impl\ImplDalTarifBaseBillet.cs" />
+    <Compile Include="dal\impl\ImplDalTarifBaseCommission.cs" />
+    <Compile Include="dal\impl\ImplDalTarifCommissionPar.cs" />
+    <Compile Include="dal\impl\ImplDalTarifDeveloppement.cs" />
+    <Compile Include="dal\impl\ImplDalTrajet.cs" />
+    <Compile Include="dal\impl\ImplDalTypeAgence.cs" />
+    <Compile Include="dal\impl\ImplDalTypeAgent.cs" />
+    <Compile Include="dal\impl\ImplDalTypeCommission.cs" />
+    <Compile Include="dal\impl\ImplDalTypePrelevement.cs" />
+    <Compile Include="dal\impl\ImplDalTypeProprietaire.cs" />
+    <Compile Include="dal\impl\ImplDalTypeRecuAD.cs" />
+    <Compile Include="dal\impl\ImplDalUSAbonnementNV.cs" />
+    <Compile Include="dal\impl\ImplDalUSAbonnementNVDevis.cs" />
+    <Compile Include="dal\impl\ImplDalUSAppareil.cs" />
+    <Compile Include="dal\impl\ImplDalUSArret.cs" />
+    <Compile Include="dal\impl\ImplDalUSAxe.cs" />
+    <Compile Include="dal\impl\ImplDalUSBillet.cs" />
+    <Compile Include="dal\impl\ImplDalUSCarte.cs" />
+    <Compile Include="dal\impl\ImplDalUSCarteReduction.cs" />
+    <Compile Include="dal\impl\ImplDalUSCategorieBillet.cs" />
+    <Compile Include="dal\impl\ImplDalUSInfoPasse.cs" />
+    <Compile Include="dal\impl\ImplDalUSLieu.cs" />
+    <Compile Include="dal\impl\ImplDalUSLigne.cs" />
+    <Compile Include="dal\impl\ImplDalUSPlageNombreBillet.cs" />
+    <Compile Include="dal\impl\ImplDalUSPoint.cs" />
+    <Compile Include="dal\impl\ImplDalUSPrixBase.cs" />
+    <Compile Include="dal\impl\ImplDalUSReductionBillet.cs" />
+    <Compile Include="dal\impl\ImplDalUSReductionParticulier.cs" />
+    <Compile Include="dal\impl\ImplDalUSTrajet.cs" />
+    <Compile Include="dal\impl\ImplDalUSTypeAppareil.cs" />
+    <Compile Include="dal\impl\ImplDalUSValidationReduction.cs" />
+    <Compile Include="dal\impl\ImplDalUSVoyage.cs" />
+    <Compile Include="dal\impl\ImplDalUSZone.cs" />
+    <Compile Include="dal\impl\ImplDalVehicule.cs" />
+    <Compile Include="dal\impl\ImplDalVerification.cs" />
+    <Compile Include="dal\impl\ImplDalVille.cs" />
+    <Compile Include="dal\impl\ImplDalVoiture.cs" />
+    <Compile Include="dal\impl\ImplDalVoyage.cs" />
+    <Compile Include="dal\impl\ImplDalVoyageAbonnement.cs" />
+    <Compile Include="dal\impl\ImplDalVoyageAbonnementDevis.cs" />
+    <Compile Include="dal\impl\ImplDalZone.cs" />
+    <Compile Include="dal\intf\IntfAutorisationVoyage.cs" />
+    <Compile Include="dal\intf\IntfDalAbonnement.cs" />
+    <Compile Include="dal\intf\IntfDalAgence.cs" />
+    <Compile Include="dal\intf\IntfDalAgent.cs" />
+    <Compile Include="dal\intf\IntfDalArrondissement.cs" />
+    <Compile Include="dal\intf\IntfDalAutorisationDepart.cs" />
+    <Compile Include="dal\intf\IntfDalBagage.cs" />
+    <Compile Include="dal\intf\IntfDalBillet.cs" />
+    <Compile Include="dal\intf\IntfDalBilletCommande.cs" />
+    <Compile Include="dal\intf\IntfDalBonDeCommande.cs" />
+    <Compile Include="dal\intf\IntfDalCA.cs" />
+    <Compile Include="dal\intf\IntfDalCalculCategorieBillet.cs" />
+    <Compile Include="dal\intf\IntfDalCalculPrixBillet.cs" />
+    <Compile Include="dal\intf\IntfDalCalculReductionBillet.cs" />
+    <Compile Include="dal\intf\IntfDalCalendar.cs" />
+    <Compile Include="dal\intf\IntfDalChauffeur.cs" />
+    <Compile Include="dal\intf\IntfDalCheque.cs" />
+    <Compile Include="dal\intf\IntfDalClient.cs" />
+    <Compile Include="dal\intf\IntfDalCommission.cs" />
+    <Compile Include="dal\intf\IntfDalCommissionDevis.cs" />
+    <Compile Include="dal\intf\IntfDalCommune.cs" />
+    <Compile Include="dal\intf\IntfDalConnectBase.cs" />
+    <Compile Include="dal\intf\IntfDalCooperative.cs" />
+    <Compile Include="dal\intf\IntfDalDesignationCommission.cs" />
+    <Compile Include="dal\intf\IntfDalDistrict.cs" />
+    <Compile Include="dal\intf\IntfDalDureeAbonnement.cs" />
+    <Compile Include="dal\intf\IntfDalDureeAbonnementDevis.cs" />
+    <Compile Include="dal\intf\IntfDalEscorte.cs" />
+    <Compile Include="dal\intf\IntfDalEscorteVoyage.cs" />
+    <Compile Include="dal\intf\IntfDalEtablissementScolaire.cs" />
+    <Compile Include="dal\intf\IntfDalEtatCivil.cs" />
+    <Compile Include="dal\intf\IntfDalFacture.cs" />
+    <Compile Include="dal\intf\IntfDalFicheBord.cs" />
+    <Compile Include="dal\intf\IntfDalGareRoutiere.cs" />
+    <Compile Include="dal\intf\IntfDalGeneral.cs" />
+    <Compile Include="dal\intf\IntfDalIndividue.cs" />
+    <Compile Include="dal\intf\IntfDalInfoExedantBagage.cs" />
+    <Compile Include="dal\intf\IntfDalInfoPrixCommission.cs" />
+    <Compile Include="dal\intf\IntfDalItineraire.cs" />
+    <Compile Include="dal\intf\IntfDalLicence.cs" />
+    <Compile Include="dal\intf\IntfDalLien.cs" />
+    <Compile Include="dal\intf\IntfDalModePaiement.cs" />
+    <Compile Include="dal\intf\IntfDalObservationAgent.cs" />
+    <Compile Include="dal\intf\IntfDalObservationChauffeur.cs" />
+    <Compile Include="dal\intf\IntfDalObservationMateriel.cs" />
+    <Compile Include="dal\intf\IntfDalObservationVehicule.cs" />
+    <Compile Include="dal\intf\IntfDalOrganisme.cs" />
+    <Compile Include="dal\intf\IntfDalParamVehicule.cs" />
+    <Compile Include="dal\intf\IntfDalPassager.cs" />
+    <Compile Include="dal\intf\IntfDalPlaceFB.cs" />
+    <Compile Include="dal\intf\IntfDalPrelevement.cs" />
+    <Compile Include="dal\intf\IntfDalProforma.cs" />
+    <Compile Include="dal\intf\IntfDalProprietaire.cs" />
+    <Compile Include="dal\intf\IntfDalProvince.cs" />
+    <Compile Include="dal\intf\IntfDalQuartier.cs" />
+    <Compile Include="dal\intf\IntfDalReceptionnaire.cs" />
+    <Compile Include="dal\intf\IntfDalRecu.cs" />
+    <Compile Include="dal\intf\IntfDalRecuAbonnement.cs" />
+    <Compile Include="dal\intf\IntfDalRecuAD.cs" />
+    <Compile Include="dal\intf\IntfDalRecuDecaisser.cs" />
+    <Compile Include="dal\intf\IntfDalRecuEncaisser.cs" />
+    <Compile Include="dal\intf\IntfDalRecuFac.cs" />
+    <Compile Include="dal\intf\IntfDalRegion.cs" />
+    <Compile Include="dal\intf\IntfDalRouteNationale.cs" />
+    <Compile Include="dal\intf\IntfDalSecteur.cs" />
+    <Compile Include="dal\intf\intfDalServiceConnectExcel.cs" />
+    <Compile Include="dal\intf\intfDalServiceExcel.cs" />
+    <Compile Include="dal\intf\IntfDalServicePage.cs" />
+    <Compile Include="dal\intf\IntfDalServicePdf.cs" />
+    <Compile Include="dal\intf\IntfDalServiceRessource.cs" />
+    <Compile Include="dal\intf\IntfDalSessionAgence.cs" />
+    <Compile Include="dal\intf\IntfDalSessionCaisse.cs" />
+    <Compile Include="dal\intf\IntfDalSituationFamiliale.cs" />
+    <Compile Include="dal\intf\IntfDalSociete.cs" />
+    <Compile Include="dal\intf\IntfDalSocieteTransport.cs" />
+    <Compile Include="dal\intf\IntfDalSourceEnergie.cs" />
+    <Compile Include="dal\intf\IntfDalStatistique.cs" />
+    <Compile Include="dal\intf\IntfDalSuiviCommission.cs" />
+    <Compile Include="dal\intf\IntfDalTarifBaseBillet.cs" />
+    <Compile Include="dal\intf\IntfDalTarifBaseCommission.cs" />
+    <Compile Include="dal\intf\IntfDalTarifCommissionPar.cs" />
+    <Compile Include="dal\intf\IntfDalTarifDeveloppement.cs" />
+    <Compile Include="dal\intf\IntfDalTrajet.cs" />
+    <Compile Include="dal\intf\IntfDalTypeAgence.cs" />
+    <Compile Include="dal\intf\IntfDalTypeAgent.cs" />
+    <Compile Include="dal\intf\IntfDalTypeCommission.cs" />
+    <Compile Include="dal\intf\IntfDalTypePrelevement.cs" />
+    <Compile Include="dal\intf\IntfDalTypeProprietaire.cs" />
+    <Compile Include="dal\intf\IntfDalTypeRecuAD.cs" />
+    <Compile Include="dal\intf\IntfDalUSAbonnementNV.cs" />
+    <Compile Include="dal\intf\IntfDalUSAbonnementNVDevis.cs" />
+    <Compile Include="dal\intf\IntfDalUSAppareil.cs" />
+    <Compile Include="dal\intf\IntfDalUSArret.cs" />
+    <Compile Include="dal\intf\IntfDalUSAxe.cs" />
+    <Compile Include="dal\intf\IntfDalUSBillet.cs" />
+    <Compile Include="dal\intf\IntfDalUSCarte.cs" />
+    <Compile Include="dal\intf\IntfDalUSCarteReduction.cs" />
+    <Compile Include="dal\intf\IntfDalUSCategorieBillet.cs" />
+    <Compile Include="dal\intf\IntfDalUSInfoPasse.cs" />
+    <Compile Include="dal\intf\IntfDalUSLieu.cs" />
+    <Compile Include="dal\intf\IntfDalUSLigne.cs" />
+    <Compile Include="dal\intf\IntfDalUSPlageNombreBillet.cs" />
+    <Compile Include="dal\intf\IntfDalUSPoint.cs" />
+    <Compile Include="dal\intf\IntfDalUSPrixBase.cs" />
+    <Compile Include="dal\intf\IntfDalUSReductionBillet.cs" />
+    <Compile Include="dal\intf\IntfDalUSReductionParticulier.cs" />
+    <Compile Include="dal\intf\IntfDalUSTrajet.cs" />
+    <Compile Include="dal\intf\IntfDalUSTypeAppareil.cs" />
+    <Compile Include="dal\intf\IntfDalUSValidationReduction.cs" />
+    <Compile Include="dal\intf\IntfDalUSVoyage.cs" />
+    <Compile Include="dal\intf\IntfDalUSZone.cs" />
+    <Compile Include="dal\intf\IntfDalVehicule.cs" />
+    <Compile Include="dal\intf\IntfDalVerification.cs" />
+    <Compile Include="dal\intf\IntfDalVille.cs" />
+    <Compile Include="dal\intf\IntfDalVoiture.cs" />
+    <Compile Include="dal\intf\IntfDalVoyage.cs" />
+    <Compile Include="dal\intf\IntfDalVoyageAbonnement.cs" />
+    <Compile Include="dal\intf\IntfDalVoyageAbonnementDevis.cs" />
+    <Compile Include="dal\intf\IntfDalZone.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="utile\Convertisseuse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\AppCrl\AppCrl.csproj">
+      <Project>{7ae91809-5ea5-459f-8209-6110919295bc}</Project>
+      <Name>AppCrl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\AppRessources\AppRessources.csproj">
+      <Project>{6d6a9993-82c3-43ab-a313-bd62ffe6834d}</Project>
+      <Name>AppRessources</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="dll\itextsharp.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

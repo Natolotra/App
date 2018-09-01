@@ -1,0 +1,79 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterControleur.master.cs" Inherits="AppWeb.ihmActeur.controleur.MasterControleur" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <link href="../../CssStyle/Style.css" rel="stylesheet" type="text/css" runat="server" id="styleCss"/>
+    <link href="../../CssStyle/CssMenu/style.css" rel="stylesheet" type="text/css" runat="server" id="styleCssMenu"/>
+    <link rel="icon" href="../../CssStyle/images/ico.png" />
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+     <div id="wrap">
+        <div id="header">
+            
+            <div id="logo">
+                <div id="logoL">
+                    <h1>LG Trans</h1>
+                </div>
+                <div id="logoR">
+                    <b>Gestion et Management <br/>Transport Public Routier de Voyageurs</b>
+                </div>
+		    </div>
+			<div id="session">
+			    <div id="horloge">
+                    <asp:Label ID="LabLieuAgence" runat="server" Text=""></asp:Label>
+                    <div id="horloge2">
+                        <script type="text/javascript" src="../../scripts/cntScript.js"></script>
+                    </div>
+                </div>
+                <div id="horlogeRight">
+                    <asp:Label ID="LabSession" runat="server" Text=""></asp:Label><br />
+                    <a href="../Deconnecte.aspx">Déconnexion</a>
+                </div>
+			</div>
+        </div>
+
+        
+       
+        
+        <div id="content">
+            
+            <form id="form1" runat="server">
+                <div>
+                    <%--<asp:RadioButtonList ID="rblSecteur" runat="server"
+                        RepeatDirection="Horizontal" AutoPostBack="True" Font-Bold="True" 
+                        onselectedindexchanged="rblSecteur_SelectedIndexChanged">
+                        <asp:ListItem Text="Urbaine/Suburbaine" Value="US" Selected="True"></asp:ListItem>
+                        <asp:ListItem Text="Regionale/Nationale" Value="RN"></asp:ListItem>
+                    </asp:RadioButtonList>--%>
+                    <asp:Panel ID="panUL" runat="server">
+                        <ul id="css3menu1" class="topmenu" >
+                            <asp:Panel ID="panMenu" runat="server">
+                            </asp:Panel>
+                        </ul>
+                    </asp:Panel>
+                    <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+                    </asp:ContentPlaceHolder>
+                </div>
+            </form>
+
+             <div class="clear">
+		     </div>
+        </div>
+
+        <div id="foot">
+             <em>LG Trans - Version 1.0 Copyright © 2012, CNT</em>
+        </div>
+
+     </div>
+
+    
+</body>
+</html>
+
