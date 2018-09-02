@@ -127,6 +127,7 @@
   <ItemGroup>
     <Compile Include="App_Start\SwaggerConfig.cs" />
     <Compile Include="ConfigSettings.cs" />
+    <Compile Include="Controllers\ItineraireController.cs" />
     <Compile Include="Controllers\TrajetController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="App_Start\SimpleInjectorConfig.cs" />

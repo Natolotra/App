@@ -1,4 +1,5 @@
-﻿using App.Queries.Trajet;
+﻿using App.Queries.Itineraire;
+using App.Queries.Trajet;
 using SimpleInjector;
 using SimpleInjector.Lifestyles;
 namespace AppAPI
@@ -13,6 +14,7 @@ namespace AppAPI
 
             // Register your types, for instance using the scoped lifestyle:
             container.Register<ITrajetQueries>(() => new TrajetQueries(ConfigSettings.ConnectionString));
+            container.Register<IItineraireQueries>(() => new ItineraireQueries(ConfigSettings.ConnectionString));
 
             return container;
         }

@@ -59,6 +59,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Constants.cs" />
+    <Compile Include="Itineraire\IItineraireQueries.cs" />
+    <Compile Include="Itineraire\ItineraireDto.cs" />
+    <Compile Include="Itineraire\ItineraireQueries.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Trajet\ITrajetQueries.cs" />
     <Compile Include="Trajet\TrajetDto.cs" />

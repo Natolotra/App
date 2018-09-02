@@ -26,5 +26,18 @@ namespace App.Queries.Trajet
             }
             return trajets;
         }
+
+        public async Task<IEnumerable<TrajetDto>> GetListTrajetByIdItineraire(string idIt)
+        {
+            IEnumerable<TrajetDto> trajets = null;
+            using (var connection = new MySqlConnection(_connectionString))
+            {
+                await connection.OpenAsync();
+                DynamicParameters parameters = new DynamicParameters();
+                parameters.Add("idIt", idIt, DbType.String, ParameterDirection.Input);
+                trajets = await connection.QueryAsync<TrajetDto>(Constants.AppPs_Trajet_GetListTrajetByIdItineraire, parameters, commandType: CommandType.StoredProcedure);
+            }
+            return trajets;
+        }
     }
 }

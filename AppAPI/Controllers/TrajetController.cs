@@ -33,5 +33,15 @@ namespace AppAPI.Controllers
             if (trajet == null) Request.CreateErrorResponse(HttpStatusCode.NotFound, "");
             return Request.CreateResponse(HttpStatusCode.OK, trajet);
         }
+
+        [HttpGet]
+        [Route("getlisttrajetbyiditineraire")]
+        [ResponseType(typeof(TrajetDto))]
+        public async Task<HttpResponseMessage> GetListTrajetByIdItineraireAsync(string idIt)
+        {
+            var trajet = await _trajetQueries.GetListTrajetByIdItineraire(idIt);
+            if (trajet == null) Request.CreateErrorResponse(HttpStatusCode.NotFound, "");
+            return Request.CreateResponse(HttpStatusCode.OK, trajet);
+        }
     }
 }

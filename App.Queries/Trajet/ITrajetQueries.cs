@@ -6,5 +6,7 @@ namespace App.Queries.Trajet
     public interface ITrajetQueries
     {
         Task<IEnumerable<TrajetDto>> GetAllTrajet();
+
+        Task<IEnumerable<TrajetDto>> GetListTrajetByIdItineraire(string idIt);
     }
 }
