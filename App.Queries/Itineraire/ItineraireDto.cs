@@ -17,5 +17,6 @@ namespace App.Queries.Itineraire
         public string numInfoBagage { get; set; }
         public string VilleD { get; set; }
         public string VilleF { get; set; }
+        public double? montantTarifBaseBillet { get; set; }
     }
 }

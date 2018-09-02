@@ -16,5 +16,6 @@ namespace App.Queries.Trajet
         public string numTarifBaseBillet { get; set; }
         public string VilleD { get; set; }
         public string VilleF { get; set; }
+        public double? montantTarifBaseBillet { get; set; }
     }
 }
